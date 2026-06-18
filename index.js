@@ -6,7 +6,7 @@ const { execSync } = require('child_process');
 const { compareVersions, satisfies } = require('compare-versions');
 
 const currentProjectRoot = process.cwd();
-const isNpxRun = __dirname.indexOf(currentProjectRoot === -1);
+const isNpxRun = __dirname.indexOf(currentProjectRoot) === -1;
 let outputConsole = false;
 
 function detectPackageManager() {
